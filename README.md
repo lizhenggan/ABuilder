@@ -4,7 +4,7 @@ Python开发的mysql链式操作，ABuilder告别繁琐的模型定义，节省�
 # 快速开始
 - 安装 a-sqlbuilder
 ```python
-pip3 install a-sqlbuilder
+pip install a-sqlbuilder
 ```
 - 设置数据配置文件（参照数据库配置文件说明）
 - 开始使用
