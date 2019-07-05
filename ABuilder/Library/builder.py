@@ -72,7 +72,7 @@ class Builder:
         self._where_str = string if self._where_str == '' else "%s %s %s" % (self._where_str, splicing, string)
         return self
 
-    def where_or(self, where, splicing='and'):
+    def where_or(self, where, splicing='or'):
         """
         where or
         :param where:
@@ -82,7 +82,7 @@ class Builder:
         Validate().where_format(where)
         string = ''
         for item in where:
-            string = "%s%s" % (string, "%s%s %s %s" % ('' if string == '' else " and ", item, where[item][0], '%s'))
+            string = "%s%s" % (string, "%s%s %s %s" % ('' if string == '' else " or ", item, where[item][0], '%s'))
             self._param_list.append(where[item][1])
         self._where_or_str = string if self._where_or_str == '' else "%s %s %s" % (self._where_or_str, splicing, string)
         return self
